@@ -29,7 +29,7 @@ void loop()
   int i;
 
   Serial.println("On");
-  for (i = 0; i < 4; i++) {
+  for (i = 0; i < 16; i++) {
     rfWriteString(RF_OUT, BIT_LEN_US, on_string, true);
     delayMicroseconds(BIT_LEN_US * 8);
   }
@@ -37,7 +37,7 @@ void loop()
   delay(3000);
 
   Serial.println("Off");
-  for (i = 0; i < 4; i++) {
+  for (i = 0; i < 16; i++) {
     rfWriteString(RF_OUT, BIT_LEN_US, off_string, true);
     delayMicroseconds(BIT_LEN_US * 8);
   }
